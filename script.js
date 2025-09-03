@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollIndicator = document.querySelector('.scroll-indicator');
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', function() {
-            const section2 = document.getElementById('section-2');
-            if (section2) {
-                section2.scrollIntoView({
+            const section3 = document.getElementById('section-3');
+            if (section3) {
+                section3.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
@@ -316,5 +316,153 @@ window.addEventListener('error', function(e) {
         if (e.target.href.includes('fonts.googleapis.com')) {
             document.body.style.fontFamily = 'system-ui, -apple-system, sans-serif';
         }
+    }
+});
+
+// Roast Section JavaScript Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Counter animation for roast section
+    let roastCounter = 274;
+    const roastCounterElement = document.getElementById('roastCounter');
+    
+    if (roastCounterElement) {
+        setInterval(() => {
+            const increment = Math.random() > 0.5 ? 1 : 2;
+            roastCounter += increment;
+            roastCounterElement.textContent = roastCounter;
+        }, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
+    }
+
+    // Rotating suggestions for roast section
+    const roastSuggestionsElement = document.getElementById('roastSuggestions');
+    const roastPromptInput = document.querySelector('.roast-prompt-input');
+    
+    if (roastSuggestionsElement && roastPromptInput) {
+        let currentIndex = 0;
+        const suggestions = [
+            "Put them in another country / city 🌍",
+            "Turn them into a superhero 🦸",
+            "Turn them into a villain 😈",
+            "Make them an animal / mythical creature 🐉",
+            "Put them in a movie poster 🎬",
+            "Put them in a famous painting 🖼️",
+            "Make them a celebrity for a day 🌟",
+            "Put them in outer space 🚀",
+            "Put them in a fantasy world 🏰",
+            "Make them a historical figure 👑",
+            "Put them in a sports scene ⚽",
+            "Transform them into a meme character 😂",
+            "Swap their outfit with someone famous 👗",
+            "Make them tiny or giant in a scene 🔍",
+            "Add a magical effect around them ✨",
+            "Turn them into a cartoon character 📺",
+            "Turn them into an anime character 🎌",
+            "Turn them into a robot 🤖",
+            "Turn them into a cyborg 🦾",
+            "Turn them into a Pixar-style character 🎥"
+        ];
+        
+        // Hide rotating suggestions if an initial prompt is loaded
+        if (roastPromptInput.value) {
+            roastSuggestionsElement.style.display = 'none';
+        }
+        
+        // Only start rotating if no initial prompt is set
+        if (!roastPromptInput.value) {
+            setInterval(() => {
+                roastSuggestionsElement.style.opacity = '0';
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % suggestions.length;
+                    roastSuggestionsElement.textContent = suggestions[currentIndex];
+                    roastSuggestionsElement.style.opacity = '1';
+                }, 150);
+            }, 2000); // Change every 2 seconds
+        }
+    }
+
+    // Roast Transform Button Functionality
+    const roastTransformButton = document.getElementById('roastTransformButton');
+    const roastTransformDropdown = document.getElementById('roastTransformDropdown');
+    
+    if (roastTransformButton && roastTransformDropdown && roastPromptInput) {
+        // Toggle dropdown on button click
+        roastTransformButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            roastTransformDropdown.classList.toggle('show');
+        });
+        
+        // Handle option selection
+        const roastTransformOptions = document.querySelectorAll('.roast-transform-option');
+        roastTransformOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                roastPromptInput.value = this.textContent;
+                roastTransformDropdown.classList.remove('show');
+                roastPromptInput.focus();
+                
+                // Add a brief visual feedback
+                this.style.background = 'linear-gradient(45deg, rgba(255, 64, 129, 0.2), rgba(255, 107, 53, 0.2))';
+                setTimeout(() => {
+                    this.style.background = '';
+                }, 300);
+            });
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!roastTransformButton.contains(e.target) && !roastTransformDropdown.contains(e.target)) {
+                roastTransformDropdown.classList.remove('show');
+            }
+        });
+        
+        // Close dropdown on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                roastTransformDropdown.classList.remove('show');
+            }
+        });
+    }
+
+    // Roast Submit Button
+    const roastSubmitBtn = document.querySelector('.roast-submit-btn');
+    if (roastSubmitBtn && roastPromptInput) {
+        roastSubmitBtn.addEventListener('click', function() {
+            const promptText = roastPromptInput.value.trim();
+            
+            if (!promptText) {
+                alert('Please enter a prompt first!');
+                return;
+            }
+            
+            // Disable button to prevent multiple submissions
+            this.disabled = true;
+            this.textContent = 'Sending...';
+            
+            // Simulate sending (since this is pure UI)
+            setTimeout(() => {
+                alert('Sent to inbox! 💌');
+                roastPromptInput.value = '';
+                this.textContent = 'Sent! ✔️';
+                
+                setTimeout(() => {
+                    this.disabled = false;
+                    this.textContent = 'Send';
+                }, 2000);
+            }, 1000);
+        });
+    }
+
+    // Get Messages Button
+    const roastGetMessagesBtn = document.querySelector('.roast-get-messages-btn');
+    if (roastGetMessagesBtn) {
+        roastGetMessagesBtn.addEventListener('click', function() {
+            // Scroll to the hero section (section-2)
+            const heroSection = document.getElementById('section-2');
+            if (heroSection) {
+                heroSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     }
 });
