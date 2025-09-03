@@ -340,6 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (roastSuggestionsElement && roastPromptInput) {
         let currentIndex = 0;
         const suggestions = [
+            "Transform them into a meme character 😂",
             "Put them in another country / city 🌍",
             "Turn them into a superhero 🦸",
             "Turn them into a villain 😈",
@@ -351,7 +352,6 @@ document.addEventListener('DOMContentLoaded', function() {
             "Put them in a fantasy world 🏰",
             "Make them a historical figure 👑",
             "Put them in a sports scene ⚽",
-            "Transform them into a meme character 😂",
             "Swap their outfit with someone famous 👗",
             "Make them tiny or giant in a scene 🔍",
             "Add a magical effect around them ✨",
@@ -362,22 +362,33 @@ document.addEventListener('DOMContentLoaded', function() {
             "Turn them into a Pixar-style character 🎥"
         ];
         
-        // Hide rotating suggestions if an initial prompt is loaded
-        if (roastPromptInput.value) {
-            roastSuggestionsElement.style.display = 'none';
-        }
+        // Hide the suggestions element since we're putting them in the input
+        roastSuggestionsElement.style.display = 'none';
         
         // Only start rotating if no initial prompt is set
         if (!roastPromptInput.value) {
+            // Set initial placeholder
+            roastPromptInput.placeholder = suggestions[0];
+            
             setInterval(() => {
-                roastSuggestionsElement.style.opacity = '0';
-                setTimeout(() => {
-                    currentIndex = (currentIndex + 1) % suggestions.length;
-                    roastSuggestionsElement.textContent = suggestions[currentIndex];
-                    roastSuggestionsElement.style.opacity = '1';
-                }, 150);
+                currentIndex = (currentIndex + 1) % suggestions.length;
+                roastPromptInput.placeholder = suggestions[currentIndex];
             }, 2000); // Change every 2 seconds
         }
+        
+        // Stop rotating when user starts typing
+        roastPromptInput.addEventListener('input', function() {
+            if (this.value.length > 0) {
+                this.placeholder = "Enter your roast or transformation prompt here...";
+            }
+        });
+        
+        // Resume rotating when input is cleared
+        roastPromptInput.addEventListener('blur', function() {
+            if (this.value.length === 0) {
+                this.placeholder = suggestions[currentIndex];
+            }
+        });
     }
 
     // Roast Transform Button Functionality
