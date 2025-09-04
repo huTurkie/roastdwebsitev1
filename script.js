@@ -319,7 +319,7 @@ window.addEventListener('error', function(e) {
     }
 });
 
-// Roast Section JavaScript Functionality
+// Roast Section JavaScript Functionality - Updated prompts
 document.addEventListener('DOMContentLoaded', function() {
     // Counter animation for roast section
     let roastCounter = 274;
