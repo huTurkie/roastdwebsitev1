@@ -333,13 +333,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
     }
 
-    // Rotating suggestions for roast section
-    const roastSuggestionsElement = document.getElementById('roastSuggestions');
-    const roastPromptInput = document.querySelector('.roast-prompt-input');
-    
-    if (roastSuggestionsElement && roastPromptInput) {
-        let currentIndex = 0;
-        const suggestions = [
+    // Rotating heading prompts
+    const roastHeading = document.getElementById('roast-toast-heading');
+    if (roastHeading) {
+        let headingIndex = 0;
+        const headingPrompts = [
             "Make me wear your favorite outfit 👕",
             "Make me look cooler 😎",
             "Make this funnier 🤪",
@@ -365,33 +363,56 @@ document.addEventListener('DOMContentLoaded', function() {
             "Add your favorite magical effect around me ✨"
         ];
         
-        // Hide the suggestions element since we're putting them in the input
-        roastSuggestionsElement.style.display = 'none';
+        // Set initial heading
+        roastHeading.textContent = headingPrompts[0];
+        
+        // Rotate headings every 2 seconds
+        setInterval(() => {
+            headingIndex = (headingIndex + 1) % headingPrompts.length;
+            roastHeading.textContent = headingPrompts[headingIndex];
+        }, 2000);
+    }
+
+    // Rotating suggestions for roast section
+    const roastSuggestionsElement = document.getElementById('roastSuggestions');
+    const roastPromptInput = document.querySelector('.roast-prompt-input');
+    
+    if (roastSuggestionsElement && roastPromptInput) {
+        let currentIndex = 0;
+        const suggestions = [
+            "Put them in another country / city 🌍",
+            "Turn them into a superhero 🦸",
+            "Turn them into a villain 😈",
+            "Make them an animal / mythical creature 🐉",
+            "Put them in a movie poster 🎬",
+            "Put them in a famous painting 🖼️",
+            "Make them a celebrity for a day 🌟",
+            "Put them in outer space 🚀",
+            "Put them in a fantasy world 🏰",
+            "Make them a historical figure 👑",
+            "Put them in a sports scene ⚽",
+            "Transform them into a meme character 😂",
+            "Swap their outfit with someone famous 👗",
+            "Make them tiny or giant in a scene 🔍",
+            "Add a magical effect around them ✨",
+            "Turn them into a cartoon character 📺",
+            "Turn them into an anime character 🎌",
+            "Turn them into a robot 🤖",
+            "Turn them into a cyborg 🦾",
+            "Turn them into a Pixar-style character 🎥"
+        ];
         
         // Only start rotating if no initial prompt is set
         if (!roastPromptInput.value) {
-            // Set initial placeholder
-            roastPromptInput.placeholder = suggestions[0];
-            
             setInterval(() => {
-                currentIndex = (currentIndex + 1) % suggestions.length;
-                roastPromptInput.placeholder = suggestions[currentIndex];
+                roastSuggestionsElement.style.opacity = '0';
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % suggestions.length;
+                    roastSuggestionsElement.textContent = suggestions[currentIndex];
+                    roastSuggestionsElement.style.opacity = '1';
+                }, 150);
             }, 2000); // Change every 2 seconds
         }
-        
-        // Stop rotating when user starts typing
-        roastPromptInput.addEventListener('input', function() {
-            if (this.value.length > 0) {
-                this.placeholder = "Enter your roast or transformation prompt here...";
-            }
-        });
-        
-        // Resume rotating when input is cleared
-        roastPromptInput.addEventListener('blur', function() {
-            if (this.value.length === 0) {
-                this.placeholder = suggestions[currentIndex];
-            }
-        });
     }
 
     // Roast Transform Button Functionality
