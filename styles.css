@@ -56,16 +56,12 @@
     width: calc(100% + 50px);
     height: auto;
     min-height: 300px;
-    border-radius: 0 0 20px 20px;
     overflow: hidden;
     margin: 0 -25px 25px -25px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ff4081 0%, #ff6b35 100%);
-    padding: 10px;
 }
 
 .roast-person-image img {
