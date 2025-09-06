@@ -321,6 +321,27 @@ window.addEventListener('error', function(e) {
 
 // Roast Section JavaScript Functionality - Updated prompts
 document.addEventListener('DOMContentLoaded', function() {
+    // FORCE REMOVE ANY HEADING ELEMENTS ABOVE PICTURE
+    const headingElements = document.querySelectorAll('#roast-toast-heading, .roast-toast-heading');
+    headingElements.forEach(el => el.remove());
+    
+    // Check for any dynamically created heading elements and remove them
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.nodeType === 1) { // Element node
+                    if (node.id === 'roast-toast-heading' || node.classList.contains('roast-toast-heading')) {
+                        node.remove();
+                    }
+                    // Also check children
+                    const children = node.querySelectorAll('#roast-toast-heading, .roast-toast-heading');
+                    children.forEach(child => child.remove());
+                }
+            });
+        });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+
     // Counter animation for roast section
     let roastCounter = 274;
     const roastCounterElement = document.getElementById('roastCounter');

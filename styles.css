@@ -51,19 +51,6 @@
     text-align: left;
 }
 
-.roast-toast-heading {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    background: white;
-    padding: 15px 20px;
-    border-radius: 20px 20px 0 0;
-    display: block;
-    margin: 0 -25px 0 -25px;
-    width: calc(100% + 50px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
 
 .roast-person-image {
     width: calc(100% + 50px);
