@@ -56,7 +56,6 @@
     width: calc(100% + 50px);
     height: auto;
     min-height: 300px;
-    overflow: hidden;
     margin: 0 -25px 25px -25px;
     position: relative;
     display: flex;
@@ -70,6 +69,8 @@
     object-fit: contain;
     max-height: 380px;
     border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .roast-input-section {
