@@ -333,45 +333,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
     }
 
-    // Rotating heading prompts
-    const roastHeading = document.getElementById('roast-toast-heading');
-    if (roastHeading) {
-        let headingIndex = 0;
-        const headingPrompts = [
-            "Make me wear your favorite outfit 👕",
-            "Make me look cooler 😎",
-            "Make this funnier 🤪",
-            "Put me in your favorite city 🌍",
-            "Turn me into your favorite superhero 🦸",
-            "Roast this pic 😂",
-            "Roast my outfit 👔",
-            "Turn me into your favorite villain 😈",
-            "Make me your favorite animal / mythical creature 🐉",
-            "Put me in your favorite movie poster 🎬",
-            "Turn me into your favorite cartoon / anime character 🎌",
-            "Put me in your favorite famous painting 🖼️",
-            "Make me your favorite celebrity for a day 🌟",
-            "Put me in outer space 🚀",
-            "Put me in your favorite fantasy world 🏰",
-            "Turn me into your favorite robot / cyborg 🤖",
-            "Make me your favorite historical figure 👑",
-            "Put me in your favorite sports scene ⚽",
-            "Transform me into your favorite meme character 😂",
-            "Swap my outfit with your favorite famous person 👗",
-            "Make me tiny or giant in your favorite scene 🔍",
-            "Turn me into your favorite Pixar / 3D style character 🎥",
-            "Add your favorite magical effect around me ✨"
-        ];
-        
-        // Set initial heading
-        roastHeading.textContent = headingPrompts[0];
-        
-        // Rotate headings every 2 seconds
-        setInterval(() => {
-            headingIndex = (headingIndex + 1) % headingPrompts.length;
-            roastHeading.textContent = headingPrompts[headingIndex];
-        }, 2000);
-    }
 
     // Rotating suggestions for roast section
     const roastSuggestionsElement = document.getElementById('roastSuggestions');
