@@ -362,7 +362,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main
         'attached_assets/add magical effect arond them_1757164700641.jpeg', // Magical
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
-        'attached_assets/turn them into a robot_1757165048261.jpeg'  // Robot
+        'attached_assets/turn them into a robot_1757165048261.jpeg', // Robot
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/turn them into. superhero_1757165647938.jpeg' // Superhero
     ];
     let currentImageIndex = 0;
     
@@ -386,7 +388,9 @@ document.addEventListener('DOMContentLoaded', function() {
             "Enter your roast or transformation prompt here...", // Main image
             "Add a magical effect around them ✨",               // Magical effect image
             "Enter your roast or transformation prompt here...", // Main image again
-            "Turn them into a robot 🤖"                         // Robot image
+            "Turn them into a robot 🤖",                        // Robot image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Turn them into a superhero 🦸"                     // Superhero image
         ];
         
         let promptIndex = 0;
