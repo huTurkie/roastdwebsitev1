@@ -356,11 +356,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // Rotating suggestions for roast section
-    const roastSuggestionsElement = document.getElementById('roastSuggestions');
+    // Rotating placeholder text for roast section
     const roastPromptInput = document.querySelector('.roast-prompt-input');
     
-    if (roastSuggestionsElement && roastPromptInput) {
+    if (roastPromptInput) {
         let currentIndex = 0;
         const suggestions = [
             "Put them in another country / city 🌍",
@@ -385,17 +384,33 @@ document.addEventListener('DOMContentLoaded', function() {
             "Turn them into a Pixar-style character 🎥"
         ];
         
-        // Only start rotating if no initial prompt is set
-        if (!roastPromptInput.value) {
-            setInterval(() => {
-                roastSuggestionsElement.style.opacity = '0';
-                setTimeout(() => {
+        // Only rotate placeholder if input is empty
+        let placeholderInterval;
+        
+        function startPlaceholderRotation() {
+            if (!roastPromptInput.value) {
+                placeholderInterval = setInterval(() => {
                     currentIndex = (currentIndex + 1) % suggestions.length;
-                    roastSuggestionsElement.textContent = suggestions[currentIndex];
-                    roastSuggestionsElement.style.opacity = '1';
-                }, 150);
-            }, 2000); // Change every 2 seconds
+                    roastPromptInput.placeholder = suggestions[currentIndex];
+                }, 2000); // Change every 2 seconds
+            }
         }
+        
+        function stopPlaceholderRotation() {
+            clearInterval(placeholderInterval);
+        }
+        
+        // Start rotation initially
+        startPlaceholderRotation();
+        
+        // Stop rotation when user starts typing, restart when input is cleared
+        roastPromptInput.addEventListener('input', function() {
+            if (this.value) {
+                stopPlaceholderRotation();
+            } else {
+                startPlaceholderRotation();
+            }
+        });
     }
 
     // Roast Transform Button Functionality

@@ -77,18 +77,6 @@
     display: block;
 }
 
-.roast-rotating-suggestions {
-    margin: 8px 0;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
-    text-align: center;
-    min-height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease;
-    font-style: italic;
-}
 
 .roast-prompt-input {
     width: 100%;
