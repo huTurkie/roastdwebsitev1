@@ -54,18 +54,23 @@
 
 .roast-person-image {
     width: calc(100% + 50px);
-    height: 300px;
+    height: auto;
+    min-height: 300px;
     border-radius: 0 0 20px 20px;
     overflow: hidden;
     margin: 0 -25px 25px -25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .roast-person-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+    max-height: 400px;
 }
 
 .roast-input-section {
