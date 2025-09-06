@@ -356,6 +356,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    // Rotating images for roast section
+    const roastImage = document.getElementById('roast-image');
+    const images = [
+        'attached_assets/main pic web_1757164517069.jpeg',
+        'attached_assets/add magical effect arond them_1757164700641.jpeg'
+    ];
+    let currentImageIndex = 0;
+    
+    if (roastImage) {
+        setInterval(() => {
+            roastImage.style.opacity = '0';
+            setTimeout(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                roastImage.src = images[currentImageIndex];
+                roastImage.style.opacity = '1';
+            }, 300);
+        }, 3000); // Change every 3 seconds
+    }
+
     // Rotating placeholder text for roast section
     const roastPromptInput = document.querySelector('.roast-prompt-input');
     
