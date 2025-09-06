@@ -356,12 +356,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // Rotating images for roast section
+    // Rotating images for roast section - alternating pattern
     const roastImage = document.getElementById('roast-image');
     const images = [
-        'attached_assets/main pic web_1757164517069.jpeg',
-        'attached_assets/add magical effect arond them_1757164700641.jpeg',
-        'attached_assets/turn them into a robot_1757165048261.jpeg'
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main
+        'attached_assets/add magical effect arond them_1757164700641.jpeg', // Magical
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/turn them into a robot_1757165048261.jpeg'  // Robot
     ];
     let currentImageIndex = 0;
     
@@ -380,11 +381,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const roastPromptInput = document.querySelector('.roast-prompt-input');
     
     if (roastPromptInput) {
-        // Synchronized prompts that match the images
+        // Synchronized prompts that match the alternating pattern
         const synchronizedPrompts = [
-            "Enter your roast or transformation prompt here...", // Original image
-            "Add a magical effect around them ✨", // Magical effect image
-            "Turn them into a robot 🤖" // Robot image
+            "Enter your roast or transformation prompt here...", // Main image
+            "Add a magical effect around them ✨",               // Magical effect image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Turn them into a robot 🤖"                         // Robot image
         ];
         
         let promptIndex = 0;
