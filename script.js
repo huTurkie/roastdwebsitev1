@@ -333,11 +333,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
     }
 
-    // Ensure heading stays static
-    const roastHeading = document.getElementById('roast-toast-heading');
-    if (roastHeading) {
-        roastHeading.textContent = 'roast this pic 😂🔥';
-    }
 
 
     // Rotating suggestions for roast section
