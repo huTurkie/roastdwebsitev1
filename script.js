@@ -360,7 +360,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const roastImage = document.getElementById('roast-image');
     const images = [
         'attached_assets/main pic web_1757164517069.jpeg',
-        'attached_assets/add magical effect arond them_1757164700641.jpeg'
+        'attached_assets/add magical effect arond them_1757164700641.jpeg',
+        'attached_assets/turn them into a robot_1757165048261.jpeg'
     ];
     let currentImageIndex = 0;
     
@@ -375,43 +376,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000); // Change every 3 seconds
     }
 
-    // Rotating placeholder text for roast section
+    // Rotating placeholder text for roast section - synchronized with images
     const roastPromptInput = document.querySelector('.roast-prompt-input');
     
     if (roastPromptInput) {
-        let currentIndex = 0;
-        const suggestions = [
-            "Put them in another country / city 🌍",
-            "Turn them into a superhero 🦸",
-            "Turn them into a villain 😈",
-            "Make them an animal / mythical creature 🐉",
-            "Put them in a movie poster 🎬",
-            "Put them in a famous painting 🖼️",
-            "Make them a celebrity for a day 🌟",
-            "Put them in outer space 🚀",
-            "Put them in a fantasy world 🏰",
-            "Make them a historical figure 👑",
-            "Put them in a sports scene ⚽",
-            "Transform them into a meme character 😂",
-            "Swap their outfit with someone famous 👗",
-            "Make them tiny or giant in a scene 🔍",
-            "Add a magical effect around them ✨",
-            "Turn them into a cartoon character 📺",
-            "Turn them into an anime character 🎌",
-            "Turn them into a robot 🤖",
-            "Turn them into a cyborg 🦾",
-            "Turn them into a Pixar-style character 🎥"
+        // Synchronized prompts that match the images
+        const synchronizedPrompts = [
+            "Enter your roast or transformation prompt here...", // Original image
+            "Add a magical effect around them ✨", // Magical effect image
+            "Turn them into a robot 🤖" // Robot image
         ];
         
-        // Only rotate placeholder if input is empty
+        let promptIndex = 0;
         let placeholderInterval;
         
         function startPlaceholderRotation() {
             if (!roastPromptInput.value) {
                 placeholderInterval = setInterval(() => {
-                    currentIndex = (currentIndex + 1) % suggestions.length;
-                    roastPromptInput.placeholder = suggestions[currentIndex];
-                }, 2000); // Change every 2 seconds
+                    promptIndex = (promptIndex + 1) % synchronizedPrompts.length;
+                    roastPromptInput.placeholder = synchronizedPrompts[promptIndex];
+                }, 3000); // Change every 3 seconds to match image rotation
             }
         }
         
