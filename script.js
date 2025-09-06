@@ -1,17 +1,5 @@
-// URL Routing for simplified roast links
-document.addEventListener('DOMContentLoaded', function() {
-    // Check if URL contains a roast code (simplified format: roastd.link/ABC123)
-    const currentPath = window.location.pathname;
-    const codeMatch = currentPath.match(/^\/([A-Za-z0-9]{8})$/); // Match 8-character codes
-    
-    if (codeMatch) {
-        const linkCode = codeMatch[1];
-        // Redirect to unique-pic-id page with the code
-        window.location.href = `/unique-pic-id/?code=${linkCode}`;
-        return;
-    }
-
 // Smooth animations and interactions
+document.addEventListener('DOMContentLoaded', function() {
     
     // Add entrance animations to floating elements
     const floatingElements = document.querySelectorAll('.floating-element');
