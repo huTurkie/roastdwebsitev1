@@ -30,7 +30,7 @@ const images = [
     'attached_assets/main pic web_1757164517069.jpeg',           // Main again
     'attached_assets/turn them into. superhero_1757165647938.jpeg', // Superhero
     'attached_assets/main pic web_1757164517069.jpeg',           // Main again
-    'attached_assets/generated_images/Movie_poster_transformation_c2baf7cb.png' // Movie poster
+    'attached_assets/movie poster_1757211831807.jpeg' // Movie poster
 ];
 ```
 
@@ -72,7 +72,7 @@ To add a new transformation:
 - **Magical Effect**: `add magical effect arond them_1757164700641.jpeg`
 - **Robot Transformation**: `turn them into a robot_1757165048261.jpeg`
 - **Superhero Transformation**: `turn them into. superhero_1757165647938.jpeg`
-- **Movie Poster Transformation**: `generated_images/Movie_poster_transformation_c2baf7cb.png`
+- **Movie Poster Transformation**: `movie poster_1757211831807.jpeg`
 
 ## Purpose
 This system demonstrates various transformation possibilities to users while maintaining a consistent baseline (main picture) that helps users understand the before/after concept. The synchronized text prompts guide users on what each transformation represents.
