@@ -2368,12 +2368,41 @@ body {
     }
 }
 
+/* Temporary logo styling */
+.temp-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 1.5rem;
+}
+
+.temp-footer-logo {
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #ff4081, #ff6b35, #ffeb3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.temp-link-text {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+}
+
 @media (max-width: 480px) {
     .footer-container {
         padding: 0 1rem;
     }
     
     .footer-logo {
+        font-size: 1.5rem;
+    }
+    
+    .temp-footer-logo,
+    .temp-link-text {
         font-size: 1.5rem;
     }
     
