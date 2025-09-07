@@ -360,11 +360,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const roastImage = document.getElementById('roast-image');
     const images = [
         'attached_assets/main pic web_1757164517069.jpeg',           // Main
-        'attached_assets/pixar style_1757272721657.jpeg',           // Pixar-style character
+        'attached_assets/turn them into. superhero_1757165647938.jpeg', // Superhero
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/celeberty_1757274702358.jpeg',             // Celebrity for a day
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/Forest_1757275254455.jpeg',                // Forest fairy
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/pixar style_1757272721657.jpeg',           // Pixar-style character
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/fantacy world_1757274575009.jpeg',         // Fantasy world
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
@@ -375,8 +377,6 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/add magical effect arond them_1757164700641.jpeg', // Magical
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/robot1_1757273401284.jpeg', // Robot
-        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
-        'attached_assets/turn them into. superhero_1757165647938.jpeg', // Superhero
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/movie poster_1757211831807.jpeg',          // Movie poster
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
@@ -420,11 +420,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Synchronized prompts that match the alternating pattern
         const synchronizedPrompts = [
             "Enter your roast or transformation prompt here...", // Main image
-            "Turn them into a Pixar-style character 🎥",        // Pixar-style character image
+            "Turn them into a superhero 🦸",                    // Superhero image
             "Enter your roast or transformation prompt here...", // Main image again
             "Make them a celebrity for a day 🌟",              // Celebrity for a day image
             "Enter your roast or transformation prompt here...", // Main image again
             "Turn her into a beautiful forest fairy in an enchanted glade 🧚", // Forest fairy image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Turn them into a Pixar-style character 🎥",        // Pixar-style character image
             "Enter your roast or transformation prompt here...", // Main image again
             "Put them in a fantasy world 🏰",                  // Fantasy world image
             "Enter your roast or transformation prompt here...", // Main image again
@@ -435,8 +437,6 @@ document.addEventListener('DOMContentLoaded', function() {
             "Add a magical effect around them ✨",               // Magical effect image
             "Enter your roast or transformation prompt here...", // Main image again
             "Turn them into a robot 🤖",                        // Robot image
-            "Enter your roast or transformation prompt here...", // Main image again
-            "Turn them into a superhero 🦸",                    // Superhero image
             "Enter your roast or transformation prompt here...", // Main image again
             "Put them in a movie poster 🎬",                   // Movie poster image
             "Enter your roast or transformation prompt here...", // Main image again
