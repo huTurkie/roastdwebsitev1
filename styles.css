@@ -1470,9 +1470,9 @@ body {
         gap: 1.5rem;
         padding: 2rem 1rem;
         grid-template-areas: 
-            "cards ."
-            "more-cards pictures"
+            "cards pictures"
             "more-cards title"
+            "more-cards ."
             "more-cards .";
     }
     
