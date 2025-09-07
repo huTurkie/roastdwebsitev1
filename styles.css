@@ -126,7 +126,8 @@
     color: white;
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced from 15px to move closer to button */
+    margin-top: -10px; /* Move the stats text up */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -139,6 +140,7 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    margin-top: -5px; /* Move button up closer to stats text */
     transition: all 0.3s ease;
     width: 100%;
     animation: moveButton 2s ease-in-out infinite;
