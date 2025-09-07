@@ -1466,11 +1466,12 @@ body {
     .section-4 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto auto;
         gap: 1.5rem;
         padding: 2rem 1rem;
         grid-template-areas: 
-            "cards pictures"
+            "cards ."
+            "more-cards pictures"
             "more-cards title"
             "more-cards .";
     }
@@ -1490,21 +1491,22 @@ body {
         gap: 0.8rem;
     }
     
-    /* Pictures positioned above title area */
+    /* Pictures positioned directly above title */
     .section-4 .profile-pics {
         grid-area: pictures;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         gap: 1rem;
+        margin-bottom: 0.5rem;
     }
     
-    /* Title in the middle right */
+    /* Title positioned below pictures */
     .section-4 .inbox-content {
         grid-area: title;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         text-align: center;
     }
     
