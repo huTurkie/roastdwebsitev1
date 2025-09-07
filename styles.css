@@ -1259,6 +1259,11 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Make header smaller on mobile to prevent hiding content */
+    .navbar {
+        padding: 0.5rem 0; /* Reduced from 1rem to 0.5rem for mobile */
+    }
+    
     .nav-container {
         padding: 0 1rem;
         position: relative;
