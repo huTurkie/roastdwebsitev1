@@ -1462,7 +1462,7 @@ body {
         margin-bottom: 0.3rem;
     }
     
-    /* Mobile Layout for Section 4 - Cards on left, Title+Pictures on right */
+    /* Mobile Layout for Section 4 - Cards on left, Pictures and Title centered on right */
     .section-4 {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1470,43 +1470,42 @@ body {
         gap: 1.5rem;
         padding: 2rem 1rem;
         grid-template-areas: 
-            "cards title"
             "cards pictures"
-            "more-cards pictures";
+            "more-cards title"
+            "more-cards .";
     }
     
-    /* All message cards on the left */
+    /* All message cards on the left with consistent spacing */
     .section-4 .top-cards {
         grid-area: cards;
         display: flex;
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 1rem;
     }
     
     .section-4 .bottom-cards {
         grid-area: more-cards;
         display: flex;
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 1rem;
     }
     
-    /* Title on the right top */
+    /* Pictures on the right top */
+    .section-4 .profile-pics {
+        grid-area: pictures;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    /* Title centered below pictures */
     .section-4 .inbox-content {
         grid-area: title;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
-    }
-    
-    /* Pictures on the right bottom */
-    .section-4 .profile-pics {
-        grid-area: pictures;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-top: 1rem;
     }
     
     .section-4 .inbox-heading {
