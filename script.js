@@ -364,6 +364,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/celeberty_1757274702358.jpeg',             // Celebrity for a day
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/Forest_1757275254455.jpeg',                // Forest fairy
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/fantacy world_1757274575009.jpeg',         // Fantasy world
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/meme_1757273737145.jpeg',                  // Meme character
@@ -415,6 +417,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "Turn them into a Pixar-style character 🎥",        // Pixar-style character image
             "Enter your roast or transformation prompt here...", // Main image again
             "Make them a celebrity for a day 🌟",              // Celebrity for a day image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Turn her into a beautiful forest fairy in an enchanted glade 🧚", // Forest fairy image
             "Enter your roast or transformation prompt here...", // Main image again
             "Put them in a fantasy world 🏰",                  // Fantasy world image
             "Enter your roast or transformation prompt here...", // Main image again
