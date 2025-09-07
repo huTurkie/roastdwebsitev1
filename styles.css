@@ -1462,6 +1462,64 @@ body {
         margin-bottom: 0.3rem;
     }
     
+    /* Mobile Layout for Section 4 - Cards on left, Title+Pictures on right */
+    .section-4 {
+        display: flex;
+        align-items: stretch;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        flex-direction: row;
+    }
+    
+    /* Left side - all message cards in a single column */
+    .section-4 .top-cards {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        order: 1;
+    }
+    
+    /* Move bottom cards to be part of top cards visually */
+    .section-4 .bottom-cards {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        order: 1;
+        margin-top: 1rem;
+    }
+    
+    /* Right side content - title and pictures */
+    .section-4 .inbox-content {
+        flex: 1;
+        order: 3;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .section-4 .profile-pics {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .section-4 .inbox-heading {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 1rem;
+    }
+    
+    /* Ensure message cards are properly styled for mobile */
+    .section-4 .message-card {
+        width: 100%;
+        max-width: none;
+    }
+
     /* Mobile Layout for Section 3 - Pictures then Text */
     .section-3 {
         display: flex;
