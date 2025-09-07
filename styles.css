@@ -989,27 +989,33 @@ body {
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .section-3 {
-        flex-direction: column;
         padding: 2rem 1rem;
     }
     
     .games-layout {
-        flex-direction: column;
         gap: 2rem;
-        text-align: center;
     }
     
     .games-content {
-        text-align: center;
+        text-align: left;
+        flex: 0 0 auto;
+        width: 40%;
     }
     
     .chat-bubbles {
-        align-items: center;
+        flex: 1;
+        gap: 0.8rem;
     }
     
     .chat-bubble {
-        max-width: 280px;
+        max-width: none;
         width: 100%;
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .games-heading {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
     }
 }
 
