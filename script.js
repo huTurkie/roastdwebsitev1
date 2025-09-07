@@ -374,6 +374,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/Giant_1757271069633.jpeg',                 // Giant scene
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/Tiny_1757271458272.jpeg',                  // Tiny scene
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/put them inside a painting_1757167446469.jpeg', // Famous painting
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/swap their outfit_1757168196283.jpeg'      // Outfit swap
@@ -411,6 +413,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "Make them a historical figure 👑",                 // Historical figure image
             "Enter your roast or transformation prompt here...", // Main image again
             "Make them giant in a scene 🔍",                    // Giant scene image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Make them tiny in a scene 🔍",                     // Tiny scene image
             "Enter your roast or transformation prompt here...", // Main image again
             "Put them in a famous painting 🖼️",                // Famous painting image
             "Enter your roast or transformation prompt here...", // Main image again
