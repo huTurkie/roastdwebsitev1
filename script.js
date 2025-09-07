@@ -364,6 +364,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/meme_1757273737145.jpeg',                  // Meme character
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/sport _1757274331156.jpeg',                // Sports scene
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/add magical effect arond them_1757164700641.jpeg', // Magical
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/robot1_1757273401284.jpeg', // Robot
@@ -409,6 +411,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "Turn them into a Pixar-style character 🎥",        // Pixar-style character image
             "Enter your roast or transformation prompt here...", // Main image again
             "Transform them into a meme character 😂",          // Meme character image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Put them in a sports scene ⚽",                    // Sports scene image
             "Enter your roast or transformation prompt here...", // Main image again
             "Add a magical effect around them ✨",               // Magical effect image
             "Enter your roast or transformation prompt here...", // Main image again
