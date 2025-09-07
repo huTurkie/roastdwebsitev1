@@ -362,6 +362,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main
         'attached_assets/pixar style_1757272721657.jpeg',           // Pixar-style character
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/fantacy world_1757274575009.jpeg',         // Fantasy world
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/meme_1757273737145.jpeg',                  // Meme character
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/sport _1757274331156.jpeg',                // Sports scene
@@ -409,6 +411,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const synchronizedPrompts = [
             "Enter your roast or transformation prompt here...", // Main image
             "Turn them into a Pixar-style character 🎥",        // Pixar-style character image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Put them in a fantasy world 🏰",                  // Fantasy world image
             "Enter your roast or transformation prompt here...", // Main image again
             "Transform them into a meme character 😂",          // Meme character image
             "Enter your roast or transformation prompt here...", // Main image again
