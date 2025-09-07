@@ -360,6 +360,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const roastImage = document.getElementById('roast-image');
     const images = [
         'attached_assets/main pic web_1757164517069.jpeg',           // Main
+        'attached_assets/pixar style_1757272721657.jpeg',           // Pixar-style character
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/add magical effect arond them_1757164700641.jpeg', // Magical
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/turn them into a robot_1757165048261.jpeg', // Robot
@@ -402,6 +404,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Synchronized prompts that match the alternating pattern
         const synchronizedPrompts = [
             "Enter your roast or transformation prompt here...", // Main image
+            "Turn them into a Pixar-style character 🎥",        // Pixar-style character image
+            "Enter your roast or transformation prompt here...", // Main image again
             "Add a magical effect around them ✨",               // Magical effect image
             "Enter your roast or transformation prompt here...", // Main image again
             "Turn them into a robot 🤖",                        // Robot image
