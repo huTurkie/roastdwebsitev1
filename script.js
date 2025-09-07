@@ -366,6 +366,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/turn them into. superhero_1757165647938.jpeg', // Superhero
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/movie poster_1757211831807.jpeg',          // Movie poster
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/put them inside a painting_1757167446469.jpeg', // Famous painting
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/swap their outfit_1757168196283.jpeg'      // Outfit swap
@@ -395,6 +397,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "Turn them into a robot 🤖",                        // Robot image
             "Enter your roast or transformation prompt here...", // Main image again
             "Turn them into a superhero 🦸",                    // Superhero image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Put them in a movie poster 🎬",                   // Movie poster image
             "Enter your roast or transformation prompt here...", // Main image again
             "Put them in a famous painting 🖼️",                // Famous painting image
             "Enter your roast or transformation prompt here...", // Main image again
