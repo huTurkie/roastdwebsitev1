@@ -18,7 +18,9 @@ The system follows an alternating pattern where the main black and white picture
 8. **Movie poster transformation** → "Put them in a movie poster 🎬"
 9. **Main picture** → "Enter your roast or transformation prompt here..."
 10. **Outer space transformation** → "Put them in outer space 🚀"
-11. **Back to step 1** (cycle repeats)
+11. **Main picture** → "Enter your roast or transformation prompt here..."
+12. **Historical figure transformation** → "Make them a historical figure 👑"
+13. **Back to step 1** (cycle repeats)
 
 ### Technical Details
 
@@ -80,6 +82,7 @@ To add a new transformation:
 - **Superhero Transformation**: `turn them into. superhero_1757165647938.jpeg`
 - **Movie Poster Transformation**: `movie poster_1757211831807.jpeg`
 - **Outer Space Transformation**: `outer space_1757213156762.jpeg`
+- **Historical Figure Transformation**: `historical figure_1757270390879.jpeg`
 
 ## Purpose
 This system demonstrates various transformation possibilities to users while maintaining a consistent baseline (main picture) that helps users understand the before/after concept. The synchronized text prompts guide users on what each transformation represents.

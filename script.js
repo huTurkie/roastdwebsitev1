@@ -370,6 +370,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/outer space_1757213156762.jpeg',           // Outer space
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/historical figure_1757270390879.jpeg',     // Historical figure
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/put them inside a painting_1757167446469.jpeg', // Famous painting
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/swap their outfit_1757168196283.jpeg'      // Outfit swap
@@ -403,6 +405,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "Put them in a movie poster 🎬",                   // Movie poster image
             "Enter your roast or transformation prompt here...", // Main image again
             "Put them in outer space 🚀",                     // Outer space image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Make them a historical figure 👑",                 // Historical figure image
             "Enter your roast or transformation prompt here...", // Main image again
             "Put them in a famous painting 🖼️",                // Famous painting image
             "Enter your roast or transformation prompt here...", // Main image again
