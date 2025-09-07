@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/robot1_1757273401284.jpeg', // Robot
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
-        'attached_assets/movie poster_1757211831807.jpeg',          // Movie poster
+        'attached_assets/movie1_1757278409724.jpeg',                // Movie poster
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/outer space_1757213156762.jpeg',           // Outer space
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
