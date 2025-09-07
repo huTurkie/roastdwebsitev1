@@ -16,7 +16,9 @@ The system follows an alternating pattern where the main black and white picture
 6. **Superhero transformation** → "Turn them into a superhero 🦸"
 7. **Main picture** → "Enter your roast or transformation prompt here..."
 8. **Movie poster transformation** → "Put them in a movie poster 🎬"
-9. **Back to step 1** (cycle repeats)
+9. **Main picture** → "Enter your roast or transformation prompt here..."
+10. **Outer space transformation** → "Put them in outer space 🚀"
+11. **Back to step 1** (cycle repeats)
 
 ### Technical Details
 
@@ -30,7 +32,9 @@ const images = [
     'attached_assets/main pic web_1757164517069.jpeg',           // Main again
     'attached_assets/turn them into. superhero_1757165647938.jpeg', // Superhero
     'attached_assets/main pic web_1757164517069.jpeg',           // Main again
-    'attached_assets/movie poster_1757211831807.jpeg' // Movie poster
+    'attached_assets/movie poster_1757211831807.jpeg',          // Movie poster
+    'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+    'attached_assets/outer space_1757213156762.jpeg'            // Outer space
 ];
 ```
 
@@ -44,7 +48,9 @@ const synchronizedPrompts = [
     "Enter your roast or transformation prompt here...", // Main image again
     "Turn them into a superhero 🦸",                     // Superhero image
     "Enter your roast or transformation prompt here...", // Main image again
-    "Put them in a movie poster 🎬"                     // Movie poster image
+    "Put them in a movie poster 🎬",                     // Movie poster image
+    "Enter your roast or transformation prompt here...", // Main image again
+    "Put them in outer space 🚀"                       // Outer space image
 ];
 ```
 
@@ -73,6 +79,7 @@ To add a new transformation:
 - **Robot Transformation**: `turn them into a robot_1757165048261.jpeg`
 - **Superhero Transformation**: `turn them into. superhero_1757165647938.jpeg`
 - **Movie Poster Transformation**: `movie poster_1757211831807.jpeg`
+- **Outer Space Transformation**: `outer space_1757213156762.jpeg`
 
 ## Purpose
 This system demonstrates various transformation possibilities to users while maintaining a consistent baseline (main picture) that helps users understand the before/after concept. The synchronized text prompts guide users on what each transformation represents.
