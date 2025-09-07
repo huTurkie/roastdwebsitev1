@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/add magical effect arond them_1757164700641.jpeg', // Magical
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
-        'attached_assets/turn them into a robot_1757165048261.jpeg', // Robot
+        'attached_assets/robot1_1757273401284.jpeg', // Robot
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/turn them into. superhero_1757165647938.jpeg', // Superhero
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
