@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
             roastImage.style.opacity = '0';
             setTimeout(() => {
                 currentImageIndex = (currentImageIndex + 1) % images.length;
-                roastImage.src = images[currentImageIndex];
+                roastImage.src = images[currentImageIndex] + '?v=' + Date.now();
                 roastImage.style.opacity = '1';
             }, 300);
         }, 3000); // Change every 3 seconds
