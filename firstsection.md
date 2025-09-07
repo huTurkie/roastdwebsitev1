@@ -24,7 +24,9 @@ The system follows an alternating pattern where the main black and white picture
 14. **Giant scene transformation** → "Make them giant in a scene 🔍"
 15. **Main picture** → "Enter your roast or transformation prompt here..."
 16. **Tiny scene transformation** → "Make them tiny in a scene 🔍"
-17. **Back to step 1** (cycle repeats)
+17. **Main picture** → "Enter your roast or transformation prompt here..."
+18. **Cartoon character transformation** → "Turn them into a cartoon character 📺"
+19. **Back to step 1** (cycle repeats)
 
 ### Technical Details
 
@@ -89,6 +91,7 @@ To add a new transformation:
 - **Historical Figure Transformation**: `historical figure_1757270390879.jpeg`
 - **Giant Scene Transformation**: `Giant_1757271069633.jpeg`
 - **Tiny Scene Transformation**: `Tiny_1757271458272.jpeg`
+- **Cartoon Character Transformation**: `cartoon_1757271945448.jpeg`
 
 ## Purpose
 This system demonstrates various transformation possibilities to users while maintaining a consistent baseline (main picture) that helps users understand the before/after concept. The synchronized text prompts guide users on what each transformation represents.
