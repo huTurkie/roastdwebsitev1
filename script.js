@@ -392,6 +392,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/put them inside a painting_1757167446469.jpeg', // Famous painting
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
+        'attached_assets/vallian_1757275900151.jpeg',               // Villain
+        'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/methical_1757275625337.jpeg',              // Mythical creature
         'attached_assets/main pic web_1757164517069.jpeg',           // Main again
         'attached_assets/swap their outfit_1757168196283.jpeg'      // Outfit swap
@@ -447,6 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "Turn them into a cartoon character 📺",             // Cartoon character image
             "Enter your roast or transformation prompt here...", // Main image again
             "Put them in a famous painting 🖼️",                // Famous painting image
+            "Enter your roast or transformation prompt here...", // Main image again
+            "Turn them into a villain 😈",                     // Villain image
             "Enter your roast or transformation prompt here...", // Main image again
             "Turn them into mythical creature 🐉",              // Mythical creature image
             "Enter your roast or transformation prompt here...", // Main image again
