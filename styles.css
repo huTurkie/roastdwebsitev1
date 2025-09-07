@@ -1464,60 +1464,77 @@ body {
     
     /* Mobile Layout for Section 4 - Cards on left, Title+Pictures on right */
     .section-4 {
-        display: flex;
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1.5rem;
         padding: 2rem 1rem;
-        gap: 2rem;
-        flex-direction: row;
+        grid-template-areas: 
+            "cards title"
+            "cards pictures"
+            "more-cards pictures";
     }
     
-    /* Left side - all message cards in a single column */
+    /* All message cards on the left */
     .section-4 .top-cards {
-        flex: 1;
+        grid-area: cards;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        order: 1;
+        gap: 0.8rem;
     }
     
-    /* Move bottom cards to be part of top cards visually */
     .section-4 .bottom-cards {
-        position: relative;
+        grid-area: more-cards;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        order: 1;
-        margin-top: 1rem;
+        gap: 0.8rem;
     }
     
-    /* Right side content - title and pictures */
+    /* Title on the right top */
     .section-4 .inbox-content {
-        flex: 1;
-        order: 3;
-        text-align: center;
+        grid-area: title;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
     }
     
+    /* Pictures on the right bottom */
     .section-4 .profile-pics {
-        order: 2;
+        grid-area: pictures;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
         margin-top: 1rem;
     }
     
     .section-4 .inbox-heading {
-        font-size: clamp(1.5rem, 6vw, 2rem);
+        font-size: clamp(1.2rem, 6vw, 1.8rem);
         margin-bottom: 1rem;
+        line-height: 1.2;
     }
     
-    /* Ensure message cards are properly styled for mobile */
+    /* Compact message cards for mobile */
     .section-4 .message-card {
         width: 100%;
-        max-width: none;
+        padding: 0.6rem;
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    
+    .section-4 .card-header {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.4rem;
+    }
+    
+    .section-4 .card-content {
+        font-size: 0.7rem;
+    }
+    
+    .section-4 .profile-pic {
+        width: 60px;
+        height: 75px;
     }
 
     /* Mobile Layout for Section 3 - Pictures then Text */
