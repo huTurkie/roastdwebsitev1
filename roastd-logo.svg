@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+<svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
   <!-- Gradient Definition -->
   <defs>
     <linearGradient id="roastdGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -10,22 +10,12 @@
   </defs>
   
   <!-- Main Logo Text -->
-  <text x="100" y="35" 
+  <text x="75" y="32" 
         font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
         font-size="28" 
         font-weight="900" 
         text-anchor="middle" 
         fill="url(#roastdGradient)">
     Roastd
-  </text>
-  
-  <!-- Tagline -->
-  <text x="100" y="55" 
-        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
-        font-size="12" 
-        font-style="italic" 
-        text-anchor="middle" 
-        fill="#cccccc">
-    Real friends, real vibe
   </text>
 </svg>
