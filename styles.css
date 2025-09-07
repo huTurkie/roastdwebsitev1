@@ -1259,39 +1259,49 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Make header extremely small on mobile to prevent hiding content */
+    /* Make header ultra-compact on mobile - reduce by half inch */
     .navbar {
-        padding: 0.1rem 0; /* Minimal padding - almost zero */
+        padding: 0; /* Zero padding */
+        min-height: 35px; /* Fixed ultra-small height */
+        height: 35px; /* Force maximum height */
     }
     
     .nav-container {
-        padding: 0 1rem;
+        padding: 0 0.5rem; /* Minimal side padding */
         position: relative;
-        min-height: auto; /* Remove any minimum height constraints */
+        min-height: 35px; /* Match navbar height */
+        height: 35px; /* Force container height */
+        align-items: center;
     }
     
-    /* Make brand text much smaller on mobile */
+    /* Make brand text ultra-compact on mobile */
     .brand-text {
-        font-size: 1rem; /* Much smaller - reduced from 1.5rem */
-        line-height: 1.2; /* Tighter line height */
+        font-size: 0.8rem; /* Ultra small - major reduction */
+        line-height: 1; /* Minimal line height */
+        margin: 0; /* Remove any margins */
+        padding: 0; /* Remove any padding */
     }
     
     .mobile-menu-toggle {
         display: flex;
-        padding: 0.1rem; /* Minimal padding */
-        width: 30px; /* Fixed smaller width */
-        height: 30px; /* Fixed smaller height */
+        padding: 0; /* Zero padding */
+        width: 25px; /* Ultra small width */
+        height: 25px; /* Ultra small height */
+        align-items: center;
+        justify-content: center;
     }
     
     .mobile-menu-toggle span {
-        width: 18px; /* Smaller hamburger lines */
-        height: 2px;
-        margin: 2px 0; /* Tighter spacing */
+        width: 15px; /* Ultra small hamburger lines */
+        height: 1.5px; /* Thinner lines */
+        margin: 1.5px 0; /* Minimal spacing */
     }
     
-    /* Make nav icons much smaller on mobile */
+    /* Make nav icons ultra-small on mobile */
     .nav-icons i {
-        font-size: 0.9rem; /* Even smaller icons */
+        font-size: 0.75rem; /* Ultra small icons */
+        padding: 0; /* Remove padding */
+        margin: 0 0.25rem; /* Minimal spacing between icons */
     }
     
     .nav-menu {
