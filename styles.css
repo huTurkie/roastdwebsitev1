@@ -1477,18 +1477,30 @@ body {
         width: 40%;
     }
     
-    .section-4 .profile-pics {
+    .section-4 .chat-bubbles {
         flex: 1;
         display: flex;
         flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .section-4 .message-card {
+        max-width: none;
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .section-4 .profile-pics {
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
-    }
-    
-    .section-4 .top-cards,
-    .section-4 .bottom-cards {
-        display: none;
+        z-index: 10;
     }
     
     .section-4 .inbox-heading {
