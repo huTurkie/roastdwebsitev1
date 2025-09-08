@@ -1462,18 +1462,16 @@ body {
         margin-bottom: 0.3rem;
     }
     
-    /* Mobile Layout for Section 4 - Cards on left, Pictures and Title centered on right */
+    /* Mobile Layout for Section 4 - Cards on left, Pictures and Title together on right */
     .section-4 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto;
         gap: 1.5rem;
-        row-gap: 0.5rem;
         padding: 2rem 1rem;
         grid-template-areas: 
-            "cards pictures"
-            "more-cards title"
-            "more-cards ."
+            "cards right-content"
+            "more-cards right-content"
             "more-cards .";
     }
     
@@ -1492,24 +1490,31 @@ body {
         gap: 0.8rem;
     }
     
-    /* Pictures positioned directly above title */
-    .section-4 .profile-pics {
-        grid-area: pictures;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 1rem;
-        margin-bottom: 0;
-    }
-    
-    /* Title positioned below pictures */
-    .section-4 .inbox-content {
-        grid-area: title;
+    /* Right content container for pictures and title */
+    .section-4-right-content {
+        grid-area: right-content;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        margin-top: -0.5rem;
+    }
+    
+    /* Pictures positioned directly above title with minimal spacing */
+    .section-4 .profile-pics {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    /* Title positioned directly below pictures */
+    .section-4 .inbox-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
     
     .section-4 .inbox-heading {
