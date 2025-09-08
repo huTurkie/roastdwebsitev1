@@ -1462,59 +1462,33 @@ body {
         margin-bottom: 0.3rem;
     }
     
-    /* Mobile Layout for Section 4 - Cards on left, Pictures and Title together on right */
+    /* Mobile Layout for Section 4 - Same as Section 3 layout */
     .section-4 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 1.5rem;
         padding: 2rem 1rem;
-        grid-template-areas: 
-            "cards right-content"
-            "more-cards right-content"
-            "more-cards .";
     }
     
-    /* All message cards on the left with consistent spacing */
-    .section-4 .top-cards {
-        grid-area: cards;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
+    .section-4 .games-layout {
+        gap: 2rem;
     }
     
-    .section-4 .bottom-cards {
-        grid-area: more-cards;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
+    .section-4 .games-content {
+        text-align: left;
+        flex: 0 0 auto;
+        width: 40%;
     }
     
-    /* Right content container for pictures and title */
-    .section-4-right-content {
-        grid-area: right-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    /* Pictures positioned directly above title with minimal spacing */
     .section-4 .profile-pics {
+        flex: 1;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 0.2rem;
     }
     
-    /* Title positioned directly below pictures */
-    .section-4 .inbox-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+    .section-4 .top-cards,
+    .section-4 .bottom-cards {
+        display: none;
     }
     
     .section-4 .inbox-heading {
