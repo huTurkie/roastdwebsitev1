@@ -1,3 +1,0 @@
-# Redirect simplified URLs to unique-pic-id page
-# Pattern: /ABC123 -> /unique-pic-id/?code=ABC123
-/:code  /unique-pic-id/?code=:code  200
