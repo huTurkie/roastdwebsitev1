@@ -350,6 +350,17 @@ body {
     background-clip: text;
 }
 
+.brand-logo {
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+
 .nav-menu {
     display: flex;
     gap: 2rem;
