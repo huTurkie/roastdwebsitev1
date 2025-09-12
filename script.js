@@ -543,21 +543,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Disable button to prevent multiple submissions
+            // Show immediate success message
+            this.textContent = 'Sent! ✔️';
             this.disabled = true;
-            this.textContent = 'Sending...';
+            roastPromptInput.value = '';
             
-            // Simulate sending (since this is pure UI)
+            // Create success message element
+            let successMsg = document.getElementById('success-message');
+            if (!successMsg) {
+                successMsg = document.createElement('div');
+                successMsg.id = 'success-message';
+                successMsg.style.cssText = `
+                    margin-top: 15px;
+                    padding: 15px;
+                    background: #4CAF50;
+                    color: white;
+                    border-radius: 8px;
+                    text-align: center;
+                    font-weight: 600;
+                    display: none;
+                `;
+                roastPromptInput.parentNode.appendChild(successMsg);
+            }
+            
+            // Show success message
+            successMsg.textContent = 'Sent! Wait for your friend to share it on their story';
+            successMsg.style.display = 'block';
+            
+            // Hide message and reset button after 3 seconds
             setTimeout(() => {
-                alert('Sent to inbox! 💌');
-                roastPromptInput.value = '';
-                this.textContent = 'Sent! ✔️';
-                
-                setTimeout(() => {
-                    this.disabled = false;
-                    this.textContent = 'Send';
-                }, 2000);
-            }, 1000);
+                successMsg.style.display = 'none';
+                this.disabled = false;
+                this.textContent = 'Send';
+            }, 3000);
         });
     }
 
