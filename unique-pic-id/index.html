@@ -515,9 +515,15 @@
             const roastImage = document.getElementById('roast-image');
             const loadingSpinner = document.getElementById('loading-spinner');
 
-            // Extract link code from URL query parameter (e.g., ...?code=CODE)
-            const urlParams = new URLSearchParams(window.location.search);
-            linkCode = urlParams.get('code'); // Assign to global variable
+            // Extract link code from URL path (e.g., roastd.link/WTOKYX)
+            const pathSegments = window.location.pathname.split('/').filter(segment => segment);
+            linkCode = pathSegments[pathSegments.length - 1]; // Get the last segment
+            
+            // Fallback to query parameter if path doesn't contain code
+            if (!linkCode || linkCode === 'unique-pic-id') {
+                const urlParams = new URLSearchParams(window.location.search);
+                linkCode = urlParams.get('code');
+            }
 
             if (!linkCode) {
                 loadingSpinner.textContent = 'Error: No link code provided in the URL.';

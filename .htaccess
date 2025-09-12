@@ -1,12 +1,12 @@
 RewriteEngine On
 
-# Handle root domain requests
+# Handle 6-character link codes (case insensitive)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} ^/[A-Z0-9]{6}/?$
-RewriteRule ^([A-Z0-9]{6})/?$ /unique-pic-id/index.html [L]
+RewriteCond %{REQUEST_URI} ^/[A-Za-z0-9]{6}/?$
+RewriteRule ^([A-Za-z0-9]{6})/?$ /unique-pic-id/index.html?code=$1 [L,QSA]
 
-# Handle other routes
+# Handle other routes to main page
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.html [L]
