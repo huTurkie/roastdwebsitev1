@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Routing Test</title>
+</head>
+<body>
+    <h1>Routing Test Page</h1>
+    <p>Current URL: <span id="url"></span></p>
+    <p>Path: <span id="path"></span></p>
+    <p>Search: <span id="search"></span></p>
+    <p>Extracted Code: <span id="code"></span></p>
+    
+    <script>
+        document.getElementById('url').textContent = window.location.href;
+        document.getElementById('path').textContent = window.location.pathname;
+        document.getElementById('search').textContent = window.location.search;
+        
+        // Test code extraction logic
+        const pathSegments = window.location.pathname.split('/').filter(segment => segment);
+        let linkCode = pathSegments[pathSegments.length - 1];
+        
+        if (!linkCode || linkCode === 'unique-pic-id' || linkCode === 'test-routing.html') {
+            const urlParams = new URLSearchParams(window.location.search);
+            linkCode = urlParams.get('code');
+        }
+        
+        document.getElementById('code').textContent = linkCode || 'No code found';
+    </script>
+</body>
+</html>
