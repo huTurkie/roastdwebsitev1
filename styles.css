@@ -351,10 +351,18 @@ body {
 }
 
 .brand-logo {
-    height: 50px;
+    height: 65px;
     width: auto;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+/* Mobile positioning - move logo up */
+@media (max-width: 768px) {
+    .brand-logo {
+        height: 70px;
+        margin-top: -8px;
+    }
 }
 
 .brand-logo:hover {

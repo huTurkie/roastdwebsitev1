@@ -246,9 +246,17 @@
         }
 
         .logo-image {
-            height: 45px;
+            height: 60px;
             width: auto;
             display: block;
+        }
+        
+        /* Mobile - bigger logo and move up */
+        @media (max-width: 768px) {
+            .logo-image {
+                height: 65px;
+                margin-top: -6px;
+            }
         }
 
         .rotating-suggestions {
