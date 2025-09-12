@@ -574,10 +574,6 @@
             this.disabled = true;
             this.textContent = 'Sending...';
 
-            // Show success message immediately
-            document.querySelector('.main-card').style.display = 'none';
-            document.getElementById('successMessage').style.display = 'block';
-
             try {
                 console.log('🌐 [WebApp] Submitting prompt to nano-banana function');
                 console.log('🌐 [WebApp] Session ID:', currentSessionId);
@@ -600,6 +596,10 @@
                 }
 
                 console.log('🌐 [WebApp] Success! Response data:', JSON.stringify(data, null, 2));
+                
+                // Hide the entire main card and show success message
+                document.querySelector('.main-card').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
 
             } catch (error) {
                 console.error('🌐 [WebApp] Exception caught:', error);
@@ -609,9 +609,6 @@
                 alert('There was an error sending your message. Please try again.');
                 this.disabled = false;
                 this.textContent = 'Send';
-                // Show the main card again if there was an error
-                document.querySelector('.main-card').style.display = 'block';
-                document.getElementById('successMessage').style.display = 'none';
             }
         });
 
