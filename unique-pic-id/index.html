@@ -155,12 +155,12 @@
         .success-message {
             background: rgba(255, 255, 255, 0.95);
             color: #2d3748;
-            padding: 20px;
-            border-radius: 15px;
-            font-size: 1.1rem;
+            padding: 30px 25px;
+            border-radius: 25px;
+            font-size: 1.3rem;
             font-weight: 600;
             text-align: center;
-            margin-top: 20px;
+            margin-bottom: 30px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 107, 53, 0.2);
@@ -461,11 +461,12 @@
                 <button class="submit-btn">
                     Send
                 </button>
-                <div class="success-message" id="successMessage">
-                    Sent! Wait for your friend to share it on their story
-                </div>
             </div>
             
+        </div>
+
+        <div class="success-message" id="successMessage">
+            Sent! Wait for your friend to share it on their story
         </div>
 
         <div class="stats-text">
@@ -580,17 +581,9 @@
 
                 console.log('🌐 [WebApp] Success! Response data:', JSON.stringify(data, null, 2));
                 
-                // Show success message on page instead of alert
-                const successMessage = document.getElementById('successMessage');
-                successMessage.style.display = 'block';
-                
-                promptInput.value = '';
-                this.textContent = 'Sent! ✔️';
-                
-                // Hide the input section after showing success message
-                setTimeout(() => {
-                    document.querySelector('.input-section').style.display = 'none';
-                }, 1000);
+                // Hide the entire main card and show success message
+                document.querySelector('.main-card').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
 
             } catch (error) {
                 console.error('🌐 [WebApp] Exception caught:', error);
